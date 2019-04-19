@@ -1,4 +1,4 @@
-# simple-html-file-store
+# Simple Html filestore
 * Install Nodejs (version greater than 6)
 * Install MonogoDB
 * Install nodemodules by running the below command: 
