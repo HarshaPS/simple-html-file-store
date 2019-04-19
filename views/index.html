@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <h1>Welcome to Html File Data store</h1>
+    <div class="UploadFileSection">
+        <h3>Upload Section: Upload only htmlFiles</h3>
+        <form id="uploadForm" enctype="multipart/form-data" action="/api/upload" method="post">
+            <input type="file" name="HtmlFile" multiple/>
+            <input type="submit" value="Upload Html File" name="submit">
+        </form>
+    </div>
+    <div class="UploadFileSection">
+            <h3>List File by file name</h3>
+            <form action="/api/getFileByName" method="GET">
+                <div>
+                    <label>Please enter file name(with file extension):</label>
+                    <input type="text" name="fileName" required/>
+                </div>
+                <div>
+                    <label>Page Number</label>
+                    <input type="text" name="pageNo" />
+                </div>
+                <div>
+                    <label>Page Size</label>
+                    <input type="text" name="size" />
+                </div>
+                <input type="submit" value="Submit" />
+            </form>   
+    </div>
+    <div class="UpdateSection">
+            <h3>Update file content: </h3>
+            <form action="/api/modifyFileContent" method="POST">
+                <div>
+                    <label>Please enter file name(with file extension): </label>
+                    <input type="text" name="fileName" required/>
+                </div>
+                <div>
+                    <label>Content</label>
+                    <input type="text" name="content" required/>
+                </div>
+                <input type="submit" value="Submit" />
+            </form>
+    </div>
+    <div class="UploadFileSection">
+        <h3>List All Files:</h3>
+        <form action="/api/listFiles" method="GET">
+            <input type="submit" value="Get All Files content" name="GetFiles">
+        </form>   
+           
+    </div>
+
+</body>
